@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<style type="text/css">
+		* {
+		margin: 0px;
+		margin-right: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		}
+		.two {
+	  background: hsl(63, 27%, 86%);
+	  padding: 50px 20px;
+	  text-align: center;
+	} 
+	.two h1 {
+	  font-family: 'Open Sans', sans-serif;
+	  position: relative;
+	  color: #5C2610;
+	  font-size: 3em;
+	  font-weight: normal;
+	  line-height: 1;
+	  padding: 10px 0;
+	  margin: 0;
+	  display: inline-block;
+	}
+	.two h1:before {
+	  content: ""; 
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
+	  width: 80%;
+	  height: 200%;
+	  border-radius: 50%/30%;
+	  border: 6px solid #5C2610;
+	  border-left-color: transparent;
+	  border-right-color: transparent;
+	}
+	@media (max-width: 420px) {
+	  .two h1 {font-size: 2em;}
+	}
+	
+	body{
+		background-color: #E4E5D2;
+	}
+	
+	
+	
+	.btn {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		padding: 10px 40px;
+		margin: 0 20px;
+		font-family: 'Montserrat Alternates', sans-serif;
+		font-weight: 600;
+		line-height: 30px;
+		color: white;
+		font-size: 15px;
+		text-transform: uppercase;
+		background: #f5b08f;
+		border-width: 0;
+		box-shadow: 5px 5px 0 #532831;
+		outline: none;
+		cursor: pointer;
+		transition: 1.5s;
+	}
+	.btn:before, .btn:after {
+		content: "";
+		position: absolute;
+		height: 200px;
+		left: -50%;
+		margin-top: -100px;
+		top: 50%;
+		width: 200px;
+		border-radius: 50%;
+		opacity: 0.3;
+		z-index: -1;
+		transform: scale(0);
+	}
+	.btn:before {
+		background: #ffeede;
+		transition: .8s ease-out;
+	}
+	.btn:after {
+		transition: .4s ease-in .3s;
+	}
+	.btn:hover {
+		color: #532831;
+	}
+	.btn:hover:before, .btn:hover:after {
+		opacity: 1;
+		transform: scale(4);
+	}
+	
+	.decor {
+   position: relative;
+   max-width: 400px;
+   margin: 50px auto 0;
+   background: white;
+   border-radius: 30px;
+}
+.form-left-decoration, .form-right-decoration {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   background: #532831;
+   border-radius: 20px;
+}
+.form-left-decoration {
+   bottom: 60px;
+   left: -30px;
+}
+.form-right-decoration {
+   top: 60px;
+   right: -30px;
+}
+.form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   border-radius: 30px;
+   background: white;
+}
+.form-left-decoration:before {
+   top: -20px;
+}
+.form-left-decoration:after {
+   top: 20px;
+   left: 10px;
+}
+.form-right-decoration:before {
+   top: -20px;
+   right: 0;
+}
+.form-right-decoration:after {
+   top: 20px;
+   right: 10px;
+}
+.circle {
+   position: absolute;
+   bottom: 80px;
+   left: -55px;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: white;
+}
+.form-inner {
+   padding: 50px;
+}
+.form-inner input, .form-inner textarea {
+   display: block;
+   width: 100%;
+   padding: 0 20px;
+   margin-bottom: 10px;
+   background: #E9EFF6;
+   line-height: 40px;
+   border-width: 0;
+   border-radius: 20px;
+   font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+   margin-top: 30px;
+   background: #532831;
+   border-bottom: 4px solid #532831;
+   color: white;
+   font-size: 14px;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+}
+.btn {
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   padding: 10px 40px;
+   margin: 0 20px;
+   font-family: 'Montserrat Alternates', sans-serif;
+   font-weight: 600;
+   line-height: 30px;
+   color: white;
+   font-size: 15px;
+   text-transform: uppercase;
+   background: #f5b08f;
+   border-width: 0;
+   box-shadow: 5px 5px 0 #532831;
+   outline: none;
+   cursor: pointer;
+   transition: 1.5s;
+}
+.btn:before, .btn:after {
+   content: "";
+   position: absolute;
+   height: 200px;
+   left: -50%;
+   margin-top: -100px;
+   top: 50%;
+   width: 200px;
+   border-radius: 50%;
+   opacity: 0.3;
+   z-index: -1;
+   transform: scale(0);
+}
+.btn:before {
+   background: #ffeede;
+   transition: .8s ease-out;
+}
+.btn:after {
+   transition: .4s ease-in .3s;
+}
+.btn:hover {
+   color: #532831;
+}
+.btn:hover:before, .btn:hover:after {
+   opacity: 1;
+   transform: scale(4);
+}
+
+.regs{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+
+.regs a:hover{
+	color: #f5b08f;
+}
+
+
+		</style>
+
+</head>
+<body>
+	<div class="two"><h1 id="h1login">Логін</h1>
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %></div>
+<form action="/login" method="POST" class="decor"> 
+	<div class="form-left-decoration"></div>
+	<div class="form-right-decoration"></div>
+	<div class="circle"></div>
+	<div class="form-inner">
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+ <div class="center"> <button type="submit" class="btn">Login</button></div>
+  </div>
+</form>
+<div class="regs"><a href="/register" id="alogin">Реєстрація</a></div>
+</body>
+</html>

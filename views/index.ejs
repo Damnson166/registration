@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Є бой</title>
+	<style type="text/css">
+	* {
+	margin: 0px;
+	margin-right: 0px;
+	padding: 0px;
+	}
+	.two {
+  background: hsl(63, 27%, 86%);
+  padding: 50px 20px;
+  text-align: center;
+} 
+.two h1 {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  color: #5C2610;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1;
+  padding: 10px 0;
+  margin: 0;
+  display: inline-block;
+}
+.two h1:before {
+  content: ""; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 200%;
+  border-radius: 50%/30%;
+  border: 6px solid #5C2610;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+@media (max-width: 420px) {
+  .two h1 {font-size: 2em;}
+}
+
+body{
+	background-color: #E4E5D2;
+}
+
+
+
+.btn {
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   padding: 10px 40px;
+   margin: 0 20px;
+   font-family: 'Montserrat Alternates', sans-serif;
+   font-weight: 600;
+   line-height: 30px;
+   color: white;
+   font-size: 15px;
+   text-transform: uppercase;
+   background: #f5b08f;
+   border-width: 0;
+   box-shadow: 5px 5px 0 #532831;
+   outline: none;
+   cursor: pointer;
+   transition: 1.5s;
+	letter-spacing: 2px;
+}
+.btn:before, .btn:after {
+   content: "";
+   position: absolute;
+   height: 200px;
+   left: -50%;
+   margin-top: -100px;
+   top: 50%;
+   width: 200px;
+   border-radius: 50%;
+   opacity: 0.3;
+   z-index: -1;
+   transform: scale(0);
+}
+.btn:before {
+   background: #ffeede;
+   transition: .8s ease-out;
+}
+.btn:after {
+   transition: .4s ease-in .3s;
+}
+.btn:hover {
+   color: #532831;
+}
+.btn:hover:before, .btn:hover:after {
+   opacity: 1;
+   transform: scale(4);
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+}
+	</style>
+</head>
+<body>
+	<div class="two"><h1 id="h1index">Ну здарова <%= name %></h1></div>
+	<form action="/logout?_method=DELETE" method="POST" id="formindex">
+	<div class="center"><button type="submit" class="btn">Вийти</button></div>
+</form>
+</body>
+</html>
